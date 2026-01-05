@@ -1,0 +1,33 @@
+{
+  "name": "intel-ai-agent-framework",
+  "version": "1.0.0",
+  "description": "Intel AI Agent Framework - Custom agentic workflow orchestration",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "agent1": "node src/examples/agent1.js",
+    "agent2": "node src/examples/agent2.js",
+    "server": "node src/api/server.js",
+    "benchmark": "node benchmarks/run.js",
+    "test": "node index.js && node src/examples/agent1.js && node src/examples/agent2.js"
+  },
+  "keywords": [
+    "ai",
+    "agent",
+    "framework",
+    "intel",
+    "workflow",
+    "orchestration",
+    "dag"
+  ],
+  "author": "Intel DevCloud Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "uuid": "^9.0.0",
+    "winston": "^3.11.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

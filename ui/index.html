@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Agent Framework Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background: #f5f7fa;
+    }
+    h1 {
+      color: #1a73e8;
+    }
+    button {
+      padding: 10px 15px;
+      margin: 10px 0;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    pre {
+      background: #000;
+      color: #0f0;
+      padding: 15px;
+      height: 200px;
+      overflow: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Intel AI Agent Framework</h1>
+  <p>Status Dashboard</p>
+
+  <button onclick="checkHealth()">Check Health</button>
+  <button onclick="getMetrics()">View Metrics</button>
+
+  <pre id="output">Output will appear here...</pre>
+
+  <script>
+    async function checkHealth() {
+      const res = await fetch('/health');
+      const data = await res.json();
+      document.getElementById('output').textContent =
+        JSON.stringify(data, null, 2);
+    }
+
+    async function getMetrics() {
+      const res = await fetch('/metrics');
+      const data = await res.json();
+      document.getElementById('output').textContent =
+        JSON.stringify(data, null, 2);
+    }
+  </script>
+
+</body>
+</html>
