@@ -45,7 +45,8 @@ To design and implement a custom AI Agent Framework that can define, orchestrate
 - Maintains execution context
 
 4. Architecture Flow
-API Request → Orchestrator → Workflow → Tasks → Result
+
+- API Request → Orchestrator → Workflow → Tasks → Result
 
 5. API Support
 
